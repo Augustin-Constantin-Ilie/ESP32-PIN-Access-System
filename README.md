@@ -1,3 +1,5 @@
+[Deutsch](README.md) | [English](EN-README.md)
+
 # ESP32 PIN-Zugangssystem
 
 Zugangssystem mit Keypad-PIN-Eingabe, 7-Segment-Anzeige (TM1637) und servogesteuertem Schließmechanismus. Läuft als Simulation in Wokwi, die Firmware ist für den ESP32 geschrieben.
