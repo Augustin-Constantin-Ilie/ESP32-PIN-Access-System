@@ -1,3 +1,5 @@
+[Deutsch](README.md) | [English](EN-README.md)
+
 # ESP32 PIN Access System
 
 Access system with keypad PIN entry, a 7-segment display (TM1637) and a servo-controlled locking mechanism. Runs as a simulation in Wokwi; the firmware is written for the ESP32.
@@ -60,7 +62,7 @@ The settings are at the top of the sketch:
 
 ### Correct PIN
 
-Entering `1234` shows `OPEN` on the display and the servo opens the lock.
+Entering `1234` shows `OPEn` on the display and the servo opens the lock.
 
 ![Correct PIN](docs/gifs/demo-correct.gif)
 
