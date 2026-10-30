@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "author": "PIN Servo",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": -4.76, "attrs": {} },
+    { "type": "wokwi-membrane-keypad", "id": "keypad", "top": -261.2, "left": -292, "attrs": {} },
+    {
+      "type": "wokwi-tm1637-7segment",
+      "id": "disp",
+      "top": -364.84,
+      "left": -242.57,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-servo", "id": "servo", "top": 55.6, "left": 163.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "keypad:R1", "esp:13", "green", [ "v0" ] ],
+    [ "keypad:R2", "esp:12", "green", [ "v0" ] ],
+    [ "keypad:R3", "esp:14", "green", [ "v0" ] ],
+    [ "keypad:R4", "esp:27", "green", [ "v0" ] ],
+    [ "keypad:C1", "esp:26", "blue", [ "v0" ] ],
+    [ "keypad:C2", "esp:25", "blue", [ "v0" ] ],
+    [ "keypad:C3", "esp:33", "blue", [ "v0" ] ],
+    [ "keypad:C4", "esp:32", "blue", [ "v0" ] ],
+    [ "disp:CLK", "esp:22", "orange", [ "h182.4", "v384" ] ],
+    [ "disp:DIO", "esp:21", "yellow", [ "h172.8", "v144", "v259.2" ] ],
+    [ "disp:VCC", "esp:3V3", "red", [ "h19.2", "v38.4", "h38.4", "v307.2" ] ],
+    [ "disp:GND", "esp:GND.2", "black", [ "h9.6", "v38.4", "h182.4", "v297.6" ] ],
+    [ "servo:PWM", "esp:23", "orange", [ "h-9.6", "v-57.4" ] ],
+    [ "servo:V+", "esp:5V", "red", [ "h-48", "v105.7", "h-124.8", "v-19.2" ] ],
+    [ "servo:GND", "esp:GND.2", "black", [ "h-19.2", "v-86.4", "h-115.2" ] ]
+  ],
+  "dependencies": {}
+}
